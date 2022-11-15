@@ -3,9 +3,13 @@
 A fun and simple console-based Rock Paper Scissors game!
 
 Features:
+
 -Console GUI Rock, Paper, and Scissors 
+
 -Shows your game results and win/tie/loss %s
+
 -Displays a history of you and your opponent's choices!
+
 
 Instructions:
 1. Clone the project to you local machine.
