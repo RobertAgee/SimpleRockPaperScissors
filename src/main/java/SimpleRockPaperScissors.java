@@ -57,6 +57,10 @@ public class SimpleRockPaperScissors {
 				computerChose = Math.random();
 				break;
 			case 4:
+				if(gamesTotal <= 0) {
+					System.out.println("Play a game first!!");
+					System.out.println("Please enter an option : ");
+				} else {
 				System.out.println("Games Total: " + gamesTotal);
 				System.out.println("Games  Won: " + gamesWin + "\t\t   | Percentage: " + 100*gamesWin/gamesTotal + "%");
 				System.out.println("Games Tied: " + gamesTie + "\t\t   | Percentage: " + 100*gamesTie/gamesTotal + "%");
@@ -73,6 +77,7 @@ public class SimpleRockPaperScissors {
 				Scanner sc = new Scanner(System.in);
 				System.out.println("Press enter to continue");
 				String pauser = sc.nextLine();
+				}
 				break;
 			case 5:
 				System.out.println("*************************************************");
@@ -81,7 +86,7 @@ public class SimpleRockPaperScissors {
 				System.exit(0);
 				break;
 			default:
-				System.out.println("Please re-enter a valid option!!");
+				System.out.println("Please enter a valid option!!");
 				break;
 			}
 			}
