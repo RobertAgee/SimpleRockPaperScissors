@@ -38,7 +38,7 @@ public class SimpleRockPaperScissors {
 			System.out.println("*************************************************");
 			System.out.println("Please enter an option : ");
 			int logOption = 0;
-			while(logOption != 1 && logOption != 2 && logOption != 3) {
+			while(logOption != 1 && logOption != 2 && logOption != 3 && logOption != 4) {
 			logOption = scan.nextInt();
 			switch (logOption) {
 			case 1:
@@ -74,14 +74,11 @@ public class SimpleRockPaperScissors {
 				System.out.println("Computer Chose Paper: " + compPaper + "\t   | Percentage: " + 100*compPaper/gamesTotal + "%");
 				System.out.println("Computer Chose Scissors: " + compScissors + " | Percentage: " + 100*compScissors/gamesTotal + "%");
 				System.out.println(" ");
-				Scanner sc = new Scanner(System.in);
-				System.out.println("Press enter to continue");
-				String pauser = sc.nextLine();
 				}
 				break;
 			case 5:
 				System.out.println("*************************************************");
-				System.out.println("\tTHANK YOU FOR PLAYING!!");
+				System.out.println("\t    THANK YOU FOR PLAYING!!");
 				System.out.println("*************************************************");
 				System.exit(0);
 				break;
@@ -93,19 +90,15 @@ public class SimpleRockPaperScissors {
 				
 			if(computerChose <= 0.33) {
 				computerChoice = "Rock";
-				compRock++;
 			} else if(computerChose > 0.33 && computerChose <= 0.66) {
 				computerChoice = "Paper";
-				compPaper++;
 			} else if(computerChose > 0.66) {
 				computerChoice = "Scissors";
-				compScissors++;
 			}
 			
 			
-			System.out.println("You chose " + playerChoice + " and Computer chose " + computerChoice + "!!");
 			if(playerChoice == "Rock" && computerChoice == "Rock") {
-				
+				System.out.println("You chose " + playerChoice + " and Computer chose " + computerChoice + "!!");
 				System.out.println("      (^^^^^)              (^^^^^)");
 				System.out.println("     (^^^^^^^)            (^^^^^^^)");
 				System.out.println("    (^^^^^^^^^)   V.S.   (^^^^^^^^^)");
@@ -114,7 +107,11 @@ public class SimpleRockPaperScissors {
 				System.out.println("\t\tTIE!!");
 				gamesTie++;
 				gamesTotal++;
+				compRock++;
+				playerChoice = "";
+				computerChoice = "";
 			} else if(playerChoice == "Rock" && computerChoice == "Paper") {
+				System.out.println("You chose " + playerChoice + " and Computer chose " + computerChoice + "!!");
 				System.out.println("      (^^^^^)            )^^^^^^^)");
 				System.out.println("     (^^^^^^^)            )^^^^^^^)");
 				System.out.println("    (^^^^^^^^^)   V.S.   )^^^^^^^)");
@@ -124,7 +121,11 @@ public class SimpleRockPaperScissors {
 				System.out.println("\t\tYOU LOSE!!");
 				gamesLose++;
 				gamesTotal++;
+				compPaper++;
+				playerChoice = "";
+				computerChoice = "";
 			} else if(playerChoice == "Rock" && computerChoice == "Scissors") {
+				System.out.println("You chose " + playerChoice + " and Computer chose " + computerChoice + "!!");
 				System.out.println("      (^^^^^)            \\\\    (O)");
 				System.out.println("     (^^^^^^^)            \\\\   //");
 				System.out.println("    (^^^^^^^^^)   V.S.     >>0<<");
@@ -134,7 +135,11 @@ public class SimpleRockPaperScissors {
 				System.out.println("\t\tYOU WIN!!");
 				gamesWin++;
 				gamesTotal++;
+				compScissors++;
+				playerChoice = "";
+				computerChoice = "";
 			} else if(playerChoice == "Paper" && computerChoice == "Rock") {
+				System.out.println("You chose " + playerChoice + " and Computer chose " + computerChoice + "!!");
 				System.out.println("    )^^^^^^^)              (^^^^^)");
 				System.out.println("     )^^^^^^^)            (^^^^^^^)");
 				System.out.println("    )^^^^^^^)     V.S.   (^^^^^^^^^)");
@@ -143,7 +148,11 @@ public class SimpleRockPaperScissors {
 				System.out.println("\t\tYOU WIN!!");
 				gamesWin++;
 				gamesTotal++;
+				compRock++;
+				playerChoice = "";
+				computerChoice = "";
 			} else if(playerChoice == "Paper" && computerChoice == "Paper") {
+				System.out.println("You chose " + playerChoice + " and Computer chose " + computerChoice + "!!");
 				System.out.println("    )^^^^^^^)            )^^^^^^^)");
 				System.out.println("     )^^^^^^^)            )^^^^^^^)");
 				System.out.println("    )^^^^^^^)     V.S.   )^^^^^^^)");
@@ -152,7 +161,11 @@ public class SimpleRockPaperScissors {
 				System.out.println("\t\tTIE!!");
 				gamesTie++;
 				gamesTotal++;
+				compPaper++;
+				playerChoice = "";
+				computerChoice = "";
 			} else if(playerChoice == "Paper" && computerChoice == "Scissors") {
+				System.out.println("You chose " + playerChoice + " and Computer chose " + computerChoice + "!!");
 				System.out.println("    )^^^^^^^)            \\\\    (O)");
 				System.out.println("     )^^^^^^^)            \\\\   //");
 				System.out.println("    )^^^^^^^)     V.S.     >>0<<");
@@ -161,7 +174,11 @@ public class SimpleRockPaperScissors {
 				System.out.println("\t\tYOU LOSE!!");
 				gamesLose++;
 				gamesTotal++;
+				compScissors++;
+				playerChoice = "";
+				computerChoice = "";
 			} else if(playerChoice == "Scissors" && computerChoice == "Rock") {
+				System.out.println("You chose " + playerChoice + " and Computer chose " + computerChoice + "!!");
 				System.out.println("     (O)    //            (^^^^^)");
 				System.out.println("      \\\\   //            (^^^^^^^)");
 				System.out.println("       >>0<<      V.S.  (^^^^^^^^^)");
@@ -170,7 +187,11 @@ public class SimpleRockPaperScissors {
 				System.out.println("\t\tYOU LOSE!!");
 				gamesLose++;
 				gamesTotal++;
+				compRock++;
+				playerChoice = "";
+				computerChoice = "";
 			} else if(playerChoice == "Scissors" && computerChoice == "Paper") {
+				System.out.println("You chose " + playerChoice + " and Computer chose " + computerChoice + "!!");
 				System.out.println("     (O)    //           )^^^^^^^)");
 				System.out.println("      \\\\   //             )^^^^^^^)");
 				System.out.println("       >>0<<      V.S.   )^^^^^^^)");
@@ -179,7 +200,11 @@ public class SimpleRockPaperScissors {
 				System.out.println("\t\tYOU WIN!!");
 				gamesWin++;
 				gamesTotal++;
+				compPaper++;
+				playerChoice = "";
+				computerChoice = "";
 			} else if(playerChoice == "Scissors" && computerChoice == "Scissors") {
+				System.out.println("You chose " + playerChoice + " and Computer chose " + computerChoice + "!!");
 				System.out.println("     (O)    //           \\\\    (O)");
 				System.out.println("      \\\\   //             \\\\   //");
 				System.out.println("       >>0<<      V.S.     >>0<<");
@@ -188,9 +213,10 @@ public class SimpleRockPaperScissors {
 				System.out.println("\t\tTIE!!");
 				gamesTie++;
 				gamesTotal++;
-			} else {
-				System.exit(0);
-			}
+				compScissors++;
+				playerChoice = "";
+				computerChoice = "";
+			} 
 					
 			Scanner sc = new Scanner(System.in);
 			System.out.println("Press enter to continue");
