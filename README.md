@@ -11,7 +11,7 @@ Features:
 -Displays a history of you and your opponent's choices!
 
 
-Play Online: https://www.online-java.com/BcXIv1R0hH
+Play Online: https://www.online-java.com/EzjLewiWgC (click 'Run' button and allow a few seconds)
 
 Play Local:
 1. Clone the project to you local machine.
