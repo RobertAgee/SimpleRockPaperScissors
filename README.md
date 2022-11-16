@@ -11,7 +11,9 @@ Features:
 -Displays a history of you and your opponent's choices!
 
 
-Instructions:
+Play Online: https://www.online-java.com/BcXIv1R0hH
+
+Play Local:
 1. Clone the project to you local machine.
 2. Open in your favorite IDE (Eclipse, IntelliJ, VSCode, etc).
 3. Run the SimpleRockPaperScissors.java as a Java application.
